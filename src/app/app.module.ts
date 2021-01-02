@@ -1,3 +1,5 @@
+import { PostComponent } from './home/post/post.component';
+import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './home/category/category.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,19 +13,31 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from '../app/nav-bar/nav-bar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    CategoryComponent
+    HomeComponent,
+    CategoryComponent,
+    PostComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, IonicModule.forRoot(),
+     AppRoutingModule,
+     FontAwesomeModule,
+     BrowserAnimationsModule,
+     HttpClientModule,
+     FormsModule
+    ],
   providers: [
     StatusBar,
     SplashScreen,

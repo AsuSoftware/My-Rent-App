@@ -1,0 +1,32 @@
+.container-category {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0 15px 0;
+}
+
+.container-category .category-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-category .category-box .icon {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #B7B7B7;
+}
+
+.container-category .category-box .icon.active {
+    background: #306060;
+    color: #ffffff;
+}
+
+.container-category .category-box .icon i{
+    font-size: 20px;
+}
+
+.container-category .category-box .description {
+    text-align: center;
+    color: #A7A7A7;
+}

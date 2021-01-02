@@ -1,36 +1,8 @@
 <div class="container-category">
-  <div class="category-box">
-    <div class="icon">
-      <i class="fas fa-car"></i>
+  <div class="category-box" *ngFor="let icon of icons">
+    <div [ngClass]="(icon.id === active) ? 'icon active' : 'icon'" (click)="getCategory(icon.id)">
+      <i class={{icon.icon}}></i>
     </div>
-    <p class="description">Car</p>
-  </div>
-
-  <div class="category-box">
-    <div class="icon">
-      <i class="fas fa-motorcycle"></i>
-    </div>
-    <p class="description">Motorcycle</p>
-  </div>
-
-  <div class="category-box">
-    <div class="icon">
-      <i class="fas fa-ship"></i>
-    </div>
-    <p class="description">Boat</p>
-  </div>
-
-  <div class="category-box">
-    <div class="icon">
-      <i class="fas fa-bicycle"></i>
-    </div>
-    <p class="description">Bicycle</p>
-  </div>
-
-  <div class="category-box">
-    <div class="icon">
-      <i class="fas fa-shuttle-van"></i>
-    </div>
-    <p class="description">Van</p>
+    <p class="description">{{icon.id}}</p>
   </div>
 </div>

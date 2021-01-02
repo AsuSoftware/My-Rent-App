@@ -1,0 +1,60 @@
+.container-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-post .container-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+.container-post .container-box .first-image-post {
+    width: 160px;
+    background: #CCD5D8;
+    border-radius: 10%;
+    padding: 27px 15px;
+}
+
+.container-post .container-box .first-image-post img {
+    width: 90%;
+    height: 90%;
+}
+
+.container-post .container-box .post-description {
+    color: #818181;
+    background: #FFFFFF;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-box-shadow: 5px 4px 6px -2px rgba(0,0,0,0.16); 
+    box-shadow: 5px 4px 6px -2px rgba(0,0,0,0.16);
+    padding: 5px 15px;
+}
+
+.container-post .container-box .post-description .title {
+    margin: 10px 5px;
+}
+
+.container-post .container-box .post-description .year {
+    margin: 0 5px 10px 5px;
+}
+
+.container-post .container-box .post-description .distance {
+    display: flex;
+    align-items: center;
+    margin: 0 5px 10px 5px;
+}
+
+.container-post .container-box .post-description .distance i {
+    color: #306060;
+    margin: 0 5px 0 0;
+}
+
+.container-post .container-box .post-description .distance p {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
