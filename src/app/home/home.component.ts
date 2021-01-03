@@ -14,24 +14,26 @@ export class HomeComponent implements OnInit {
   menuState = false; // by default it's closed
 
   ngOnInit() {
-    this.menuService.menuAction.subscribe((res) => this.menuState = res);
-    console.log(this.menuState);
-
+    this.menuService.menuAction.subscribe((res) => { this.menuState = res; this.action(); });
   }
 
   action(): void {
     if (this.menuState === true) {
       const animation: Animation = this.animationCtrl.create()
-      .addElement(document.querySelector('.container-nav'))
-      .duration(1000)
-      .fromTo('transform', 'translate(0, 0)', 'translate(68%, -84%)')
-      .fromTo('border-radius', '0px', '25px');
+      .addElement(document.querySelector('.container-home'))
+      .duration(500)
+      .iterations(1)
+      .fromTo('borderRadius', '0px', '25px')
+      .fromTo('transform', 'translate(0, 0)', 'translate(64%, 17%)')
+      animation.play();
     } else {
       const animation: Animation = this.animationCtrl.create()
-      .addElement(document.querySelector('.container-nav'))
-      .duration(1000)
-      .fromTo('transform', 'translate(68%, -84%)', 'translate(0, 0)')
-      .fromTo('border-radius', '25px', '0');
+      .addElement(document.querySelector('.container-home'))
+      .duration(500)
+      .iterations(1)
+      .fromTo('transform', 'translate(64%, 17%)', 'translate(0, 0)')
+      .fromTo('borderRadius', '25px', '0')
+      animation.play();
     }
   }
 

@@ -10,9 +10,9 @@ export class NavBarComponent implements OnInit {
 
   constructor(private menu: MenuService) { }
 
-  menuState = false; // it's close by default
+ // menuState = false; // it's close by default
 
   ngOnInit() {
-    this.menu.menuAction.subscribe((data) => this.menuState = data);
+  //  this.menu.menuAction.subscribe((data) => this.menuState = data);
   }
 }

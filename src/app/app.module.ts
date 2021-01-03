@@ -13,9 +13,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from '../app/nav-bar/nav-bar.component';
 
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -34,9 +31,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
   imports: [BrowserModule, IonicModule.forRoot(),
      AppRoutingModule,
      FontAwesomeModule,
-     BrowserAnimationsModule,
-     HttpClientModule,
-     FormsModule
     ],
   providers: [
     StatusBar,
