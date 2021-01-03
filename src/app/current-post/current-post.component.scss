@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+
+.container-current-post {
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.container-current-post .up-section {
+    background: #C3CED2;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    padding-bottom: 65px
+}
+
+.container-current-post .up-section .top {
+    padding: 50px 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-current-post .up-section .top i {
+    font-size: 25px;
+}
+
+.container-current-post .up-section .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-current-post .up-section .gallery .container-images {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-current-post .up-section .gallery .container-images .image {
+    width: 90%;
+    display: none;
+}
+
+.container-current-post .up-section .gallery .container-images .image.active {
+    display: block;
+}
+
+.container-current-post .up-section .gallery .navigation-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.container-current-post .up-section .gallery .navigation-photo .dot {
+    border-radius: 10px;
+    width: 9px;
+    height: 9px;
+    border: 0;
+    background-color: #FFFFFF;
+    margin: 0 5px;
+}
+
+.container-current-post .up-section .gallery .navigation-photo .dot.active {
+    width: 18px;
+    height: 11px;
+    background: #316161;
+}
+
+.container-current-post .down-section {
+    color: #BCBCBC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-current-post .down-section .info-post {
+    background: #FFFFFF;
+    border-radius: 37px;
+    width: 280px;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05);
+    position: relative;
+    bottom: 50px;
+}
+
+.container-current-post .down-section .info-post .title {
+    margin: 28px 35px 10px 35px;
+    color: #717171;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 20px;
+}
+
+.container-current-post .down-section .info-post .info {
+    display: flex;
+    margin: 10px 35px;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $regular;
+    font-size: 16px;
+}
+
+.container-current-post .down-section .info-post .info span {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $bold;
+    font-size: 16px;
+    color: #717171;
+}
+
+.container-current-post .down-section .info-post .address {
+    display: flex;
+    align-items: center;
+    margin: 10px 35px 28px 35px;
+}
+
+.container-current-post .down-section .info-post .address i {
+    color: #306060;
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+.container-current-post .down-section .info-post .address p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $regular;
+    font-size: 12px;
+}
+
+.container-current-post .down-section .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-current-post .down-section .description .owner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.container-current-post .down-section .description .owner .user-data {
+    display: flex;
+    align-items: center;
+}
+
+.container-current-post .down-section .description .owner .user-data .profile-image {
+    width: 45px;
+    height: 45px;
+}
+
+.container-current-post .down-section .description .owner .user-data .profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-current-post .down-section .description .owner .user-data .owner-name {
+    margin-left: 13px;
+}
+
+.container-current-post .down-section .description .owner .user-data .owner-name p:nth-child(1) {
+    color: #717171;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+}
+
+.container-current-post .down-section .description .owner .user-data .owner-name p:nth-child(2) {
+    color: #CCCCCC;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $regular;
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.container-current-post .down-section .description .owner .date-post {
+    color: #CCCCCC;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+}
+
+.container-current-post .down-section .description .description-post {
+    margin-top: 39px;
+    width: 75%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+    color: #BCBCBC;
+}
+
+.container-current-post .down-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #F6F6F6;
+    padding: 20px 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.25); 
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.25);
+}
+
+.container-current-post .down-bar .message-btn {
+    padding: 15px 15px;
+    background:#306060;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05);
+}
+
+.container-current-post .down-bar .message-btn i {
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.container-current-post .down-bar .rent-btn {
+    padding: 19px 65px;
+    background:#306060;
+    border-radius: 21px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 17px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05);
+}

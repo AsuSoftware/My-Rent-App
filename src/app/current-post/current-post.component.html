@@ -1,9 +1,53 @@
 <div class="container-current-post">
   <div class="up-section">
     <div class="top">
-      
+      <i class="fas fa-arrow-left" (click)="getBack()"></i>
+      <i class="fas fa-share"></i>
     </div>
-    <div class="gallery"></div>
+    <div class="gallery">
+      <div class="container-images">
+        <ion-slides #slides [options]="sliderConfig" (ionSlideDidChange)="slideChanged()">
+         <ion-slide *ngFor="let photo of gallery"  >
+          <img class="image active" src={{photo.icon}} alt="image">
+         </ion-slide>
+        </ion-slides>
+      </div>
+      <div class="navigation-photo">
+        <div [ngClass]="(getCurrentImage() === photoNav.id) ? 'dot active' : 'dot'" *ngFor="let photoNav of gallery"></div>
+      </div>
+    </div>
   </div>
-  <div class="down-section"></div>
+  <div class="down-section">
+    <div class="info-post">
+      <div class="title">Bmw M5</div>
+      <div class="info">
+        <p>4.5 L 600 cp</p>
+        <p><span>80$</span> / Day</p>
+      </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Via Andrea, Rome, Italy</p>
+      </div>
+    </div>
+    <div class="description">
+      <div class="owner">
+        <div class="user-data">
+          <div class="profile-image">
+            <img src="./assets/img/profile-img.png" alt="profile-image">
+          </div>
+          <div class="owner-name">
+            <p>Maia Armin</p>
+            <p>Owner</p>
+          </div>
+        </div>
+        <p class="date-post">May 21,2019</p>
+      </div>
+      <p class="description-post">I decided to put this new car for the benefit of people who want to have unforgettable moments with this magnificent car</p>
+    </div>
+  </div>
+
+  <div class="down-bar">
+    <button class="message-btn"><i class="fas fa-envelope"></i></button>
+    <button class="rent-btn" (click)="rentCar()">Rent</button>
+  </div>
 </div>

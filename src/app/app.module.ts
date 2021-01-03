@@ -1,3 +1,4 @@
+import { CurrentPostComponent } from './current-post/current-post.component';
 import { PostComponent } from './home/post/post.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './home/category/category.component';
@@ -25,7 +26,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     NavBarComponent,
     HomeComponent,
     CategoryComponent,
-    PostComponent
+    PostComponent,
+    CurrentPostComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),

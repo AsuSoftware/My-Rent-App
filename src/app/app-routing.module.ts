@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CurrentPostComponent } from './current-post/current-post.component';
 import { HomeComponent } from './home/home.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'log-out',
     component: LogOutComponent
+  },
+  {
+    path: 'current',
+    component: CurrentPostComponent
   },
   {
     path: '',
