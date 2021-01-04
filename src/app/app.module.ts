@@ -1,3 +1,4 @@
+import { InitialViewComponent } from './initial-view/initial-view.component';
 import { CurrentPostComponent } from './current-post/current-post.component';
 import { PostComponent } from './home/post/post.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +28,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     HomeComponent,
     CategoryComponent,
     PostComponent,
-    CurrentPostComponent
+    CurrentPostComponent,
+    InitialViewComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),

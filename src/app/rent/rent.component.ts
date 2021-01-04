@@ -9,8 +9,11 @@ export class RentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  confirmRent(): void {}
+  confirmRent(): void {
+    // trimit la back-end id la vehicul si la user
+    // dupa care in back-end rezerv vehiculul la userul respectiv incepand in data respectiva pana in data de sfarsit
+   }
 
 }

@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { LocalDataService } from './../service/local-data.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../service/menu.service';
 import { Animation, AnimationController } from '@ionic/angular';
@@ -9,11 +11,15 @@ import { Animation, AnimationController } from '@ionic/angular';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private menuService: MenuService, private animationCtrl: AnimationController) { }
+  constructor(private menuService: MenuService,
+              private animationCtrl: AnimationController,
+              private localData: LocalDataService,
+              private router: Router) { }
 
   menuState = false; // by default it's closed
 
   ngOnInit() {
+    (this.localData.getLocalData() !== null) ? this.router.navigate(['/home']) : this.router.navigate(['/my-rent']);
     this.menuService.menuAction.subscribe((res) => { this.menuState = res; this.action(); });
   }
 

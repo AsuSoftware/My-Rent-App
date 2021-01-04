@@ -12,6 +12,8 @@ export class CurrentPostComponent implements OnInit {
 
   @ViewChild('slides') slides: IonSlides;
 
+  currentPost = ''; // this will be contain the id of post
+
   currentImage = 0;
 
   constructor(public router: Router) { }
@@ -35,7 +37,7 @@ export class CurrentPostComponent implements OnInit {
 
   ngOnInit() {}
 
-  slideChanged() { 
+  slideChanged() {
     this.slides.getActiveIndex().then(index => {
       this.currentImage = index;
    });

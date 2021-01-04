@@ -1,0 +1,43 @@
+.container-initial-view {
+    height: 100%;
+    background-color: #fff;
+}
+
+.top {
+    padding: 110px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    background: #C3CED2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top img {
+    width: 100px;
+    height: 100px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translate(0%, 50%);
+}
+
+.bottom .sign-btn {
+    background:#306060;
+    padding: 15px 45px;
+    border-radius: 21px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.bottom .log-btn {
+    background: transparent;
+    padding: 15px 45px;
+    border-radius: 21px;
+    border: 1px solid#306060;
+    color: black;
+}

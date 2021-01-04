@@ -11,21 +11,50 @@ $bold: 700;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background: blueviolet;
+    background: #FFFFFF;
 }
 
-.container-rent .container-info .info-vehicle {
+.container-rent .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #C3CED2;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+}
+
+.container-rent .top .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px 37px;
+    position: relative;
+}
+
+.container-rent .top .bar i {
+    font-size: 25px;
+    position: absolute;
+}
+
+.container-rent .top .bar p {
+    color: #717171;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $bold;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.container-rent .container-info {
     background: #FFFFFF;
     border-radius: 37px;
     width: 280px;
-    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05); 
-    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05);
-    position: relative;
-    bottom: 50px;
+    box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 80px;
 }
 
-.container-rent .container-info .info-vehicle .title {
+.container-rent .container-info .title {
     margin: 28px 35px 10px 35px;
     color: #717171;
     font-family: 'Quicksand', sans-serif;
@@ -33,38 +62,40 @@ $bold: 700;
     font-size: 20px;
 }
 
-.container-rent .container-info .info-vehicle .info {
+.container-rent .container-info .info {
     display: flex;
     margin: 10px 35px;
     justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
     font-weight: $regular;
     font-size: 16px;
+    color: #717171;
 }
 
-.container-rent .container-info .info-vehicle .info span {
+.container-rent .container-info .info span {
     font-family: 'Quicksand', sans-serif;
     font-weight: $bold;
     font-size: 16px;
     color: #717171;
 }
 
-.container-rent .container-info .info-vehicle .address {
+.container-rent .container-info .address {
     display: flex;
     align-items: center;
     margin: 10px 35px 28px 35px;
 }
 
-.container-rent .container-info .info-vehicle .address i {
+.container-rent .container-info .address i {
     color: #306060;
     font-size: 19px;
     margin-right: 8px;
 }
 
-.container-rent .container-info .info-vehicle .address p {
+.container-rent .container-info .address p {
     font-family: 'Quicksand', sans-serif;
     font-weight: $regular;
     font-size: 12px;
+    color: #717171;
 }
 
 .container-rent .down-bar {
@@ -92,4 +123,79 @@ $bold: 700;
     font-size: 17px;
     color: #ffffff;
     box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+.container-rent .form-rent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 8%;
+    z-index: 20;
+}
+
+.container-rent .form-rent .top-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-rent .form-rent .top-form .input-form-date-start {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.container-rent .form-rent .top-form ion-label {
+    color: black;
+}
+
+.container-rent .form-rent .top-form .input-form-date-start ion-datetime {
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 7px;
+    color: black;
+    width: 145px;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16);
+    background: #fff;
+}
+
+.container-rent .form-rent .top-form .input-form-date-end {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-rent .form-rent .top-form .input-form-date-end ion-datetime {
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 7px;
+    color: black;
+    width: 145px;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16);
+    background: #fff;
+}
+
+.container-rent .form-rent .input-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.container-rent .form-rent .input-form {
+    color: black;
+    width: calc(145px + 145px + 10px);
+}
+
+.container-rent .form-rent .input-form ion-select {
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 7px;
+    color: black;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.16);
+    background: #fff;
 }

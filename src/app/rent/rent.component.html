@@ -1,34 +1,41 @@
 <div class="container-rent">
-  <div class="container-info">
-      <div class="info-vehicle">
-        <div class="title">Bmw M5</div>
-        <div class="info">
-          <p>4.5 L 600 cp</p>
-          <p><span>80$</span> / Day</p>
-        </div>
-        <div class="address">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>Via Andrea, Rome, Italy</p>
-        </div>
+  <div class="top">
+    <div class="bar">
+      <i class="fas fa-arrow-left" (click)="getBack()"></i>
+      <!-- Here i need to specify the category of post -->
+      <p>Rent the car</p>
+    </div>
+    <div class="container-info">
+      <div class="title">Bmw M5</div>
+      <div class="info">
+        <p>4.5 L 600 cp</p>
+        <p><span>80$</span> / Day</p>
       </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Via Andrea, Rome, Italy</p>
+      </div>
+    </div>
   </div>
   <div class="form-rent">
-     <div class="input-form">
-         <label for="startDate">Start Date</label>
-         <input type="date" name="startDate" id="startDate">
-     </div> 
-     <div class="input-form">
-        <label for="endDate">End Date</label>
-        <input type="date" name="startDate" id="endDate">
+    <div class="top-form">
+      <div class="input-form-date-start">
+        <ion-label>Start date</ion-label>
+        <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+      </div>
+      <div class="input-form-date-end">
+        <ion-label>End date</ion-label>
+        <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+      </div>
     </div>
     <div class="input-form">
-        <label for="payment">Select Payment</label>
-        <select id="payment" name="payments">
-            <option value="visa">Visa</option>
-            <option value="master-card">Master card</option>
-            <option value="paypal">Paypal</option>
-          </select>
-    </div>  
+      <ion-label>Select Payment</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="visa">Visa</ion-select-option>
+        <ion-select-option value="master">Master card</ion-select-option>
+        <ion-select-option value="paypal">Paypal</ion-select-option>
+      </ion-select>
+    </div>
   </div>
 
   <div class="down-bar">
