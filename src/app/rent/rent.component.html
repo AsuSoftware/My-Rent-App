@@ -1,3 +1,37 @@
-<p>
-  rent works!
-</p>
+<div class="container-rent">
+  <div class="container-info">
+      <div class="info-vehicle">
+        <div class="title">Bmw M5</div>
+        <div class="info">
+          <p>4.5 L 600 cp</p>
+          <p><span>80$</span> / Day</p>
+        </div>
+        <div class="address">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Via Andrea, Rome, Italy</p>
+        </div>
+      </div>
+  </div>
+  <div class="form-rent">
+     <div class="input-form">
+         <label for="startDate">Start Date</label>
+         <input type="date" name="startDate" id="startDate">
+     </div> 
+     <div class="input-form">
+        <label for="endDate">End Date</label>
+        <input type="date" name="startDate" id="endDate">
+    </div>
+    <div class="input-form">
+        <label for="payment">Select Payment</label>
+        <select id="payment" name="payments">
+            <option value="visa">Visa</option>
+            <option value="master-card">Master card</option>
+            <option value="paypal">Paypal</option>
+          </select>
+    </div>  
+  </div>
+
+  <div class="down-bar">
+    <button class="confirm-btn" (click)="confirmRent()">Confirm</button>
+  </div>
+</div>

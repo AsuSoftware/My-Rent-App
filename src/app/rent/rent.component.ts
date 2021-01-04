@@ -11,4 +11,6 @@ export class RentComponent implements OnInit {
 
   ngOnInit() {}
 
+  confirmRent(): void {}
+
 }

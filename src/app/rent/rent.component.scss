@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+
+.container-rent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: blueviolet;
+}
+
+.container-rent .container-info .info-vehicle {
+    background: #FFFFFF;
+    border-radius: 37px;
+    width: 280px;
+    -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05); 
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.05);
+    position: relative;
+    bottom: 50px;
+}
+
+.container-rent .container-info .info-vehicle .title {
+    margin: 28px 35px 10px 35px;
+    color: #717171;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $medium;
+    font-size: 20px;
+}
+
+.container-rent .container-info .info-vehicle .info {
+    display: flex;
+    margin: 10px 35px;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $regular;
+    font-size: 16px;
+}
+
+.container-rent .container-info .info-vehicle .info span {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $bold;
+    font-size: 16px;
+    color: #717171;
+}
+
+.container-rent .container-info .info-vehicle .address {
+    display: flex;
+    align-items: center;
+    margin: 10px 35px 28px 35px;
+}
+
+.container-rent .container-info .info-vehicle .address i {
+    color: #306060;
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+.container-rent .container-info .info-vehicle .address p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: $regular;
+    font-size: 12px;
+}
+
+.container-rent .down-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #F6F6F6;
+    padding: 20px 25px 20px 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.container-rent .down-bar .confirm-btn {
+    padding: 15px 46px;
+    background: #306060;
+    border-radius: 21px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.05);
+}
