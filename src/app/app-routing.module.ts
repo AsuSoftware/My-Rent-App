@@ -20,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'rent',
+    path: 'rent/:id',
     component: RentComponent
   },
   {
@@ -44,7 +44,7 @@ const routes: Routes = [
     component: LogOutComponent
   },
   {
-    path: 'current',
+    path: 'current/:id',
     component: CurrentPostComponent
   },
   {

@@ -53,6 +53,6 @@ export class CurrentPostComponent implements OnInit {
 
    rentCar(): void {
      // get id of current car and insert into service variable to can be use for rent
-     this.router.navigate(['/rent/{id}']);
+     this.router.navigate(['/rent', { id: this.currentPost }]);
    }
 }
