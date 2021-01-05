@@ -47,4 +47,8 @@ export class HomeComponent implements OnInit {
     this.menuService.changeMenu(); // call menu service to open/close menu
   }
 
+  onPostClick(id: string): void {
+    this.router.navigate(['/current', { id }]);
+  }
+
 }

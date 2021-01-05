@@ -1,7 +1,8 @@
+import { RestDataService } from './../service/rest-data.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Icon } from '../interface/Icon';
 import { IonSlides } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-current-post',
@@ -12,11 +13,11 @@ export class CurrentPostComponent implements OnInit {
 
   @ViewChild('slides') slides: IonSlides;
 
-  currentPost = ''; // this will be contain the id of post
+  currentPost = ''; // this will be contain the post data
 
   currentImage = 0;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, private route: ActivatedRoute, private restData: RestDataService) { }
 
   // this will be the images of current post selected
   gallery: Icon[] = [
@@ -35,7 +36,11 @@ export class CurrentPostComponent implements OnInit {
     centeredSlides: true
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+     this.restData.getCurrentPost(params.id).subscribe(data => console.log(data));
+    });
+  }
 
   slideChanged() {
     this.slides.getActiveIndex().then(index => {
