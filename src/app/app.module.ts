@@ -23,7 +23,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
-  declarations: [
+  declarations: [ // permette di far sapere ad angular dell'esistentza di questi componenti.
+                  // Perchè per default Angular non esegue la scansione
     AppComponent,
     NavBarComponent,
     HomeComponent,
@@ -33,7 +34,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     InitialViewComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(),
+  imports: [BrowserModule, IonicModule.forRoot(),  // permettono di aggiungere i moduli
      AppRoutingModule,
      FontAwesomeModule,
      HttpClientModule,
@@ -43,7 +44,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // fa sapere ad angular quale componente avviare al suo avvio
 })
 export class AppModule {
   constructor(library: FaIconLibrary) { 
